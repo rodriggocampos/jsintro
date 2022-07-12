@@ -6,7 +6,8 @@ const eSpans = document.querySelectorAll("span");
 
 const eA = eSpans[0];
 const eB = eSpans[1];
-const eS = eSpans[2];
+const eP = eSpans[2];
+const eS = eSpans[3];
 
 const eButtons =document.querySelectorAll("button");
 const eButtonSoma = eButtons[0];
@@ -19,11 +20,13 @@ function somaListener(event)
 {
     console.log("Soma Listener");
     soma();
+    mudaSinalSoma();
 }
 function multiplicaListener(event)
 {
     console.log("Multiplica Listener");
     multiplica();
+    mudaSinalMultiplica();
 }
 
 function soma(params) {
@@ -40,3 +43,10 @@ function multiplica(params) {
     eS.textContent = c;
 }
 
+function mudaSinalSoma() {
+    eP.textContent = "+"
+}
+
+function mudaSinalMultiplica() {
+    eP.textContent = "*"
+}
