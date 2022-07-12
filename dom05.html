@@ -16,7 +16,9 @@
 
       for (let i = 0; i < 5; i++) {
         const numero = 7 + i;
-        eUl.innerHTML += `<li>${numero}</li>`;
+        const eLi = document.createElement("li");
+        eLi.textContent = numero;
+        eUl.appendChild(eLi);
       }
     </script>
   </body>
